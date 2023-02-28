@@ -1,0 +1,20 @@
+/* Texts */
+
+.cardTitle {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.cardSubtitle {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.cardMainValueTxt {
+    font-weight: 700;
+    font-size: 34px;
+}
+
+.cardValueTxt {
+    font-weight: 400;
+}

@@ -1,0 +1,9 @@
+
+
+#nps-status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    flex-direction: column;
+}

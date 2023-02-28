@@ -1,0 +1,22 @@
+:root{
+
+    --blueGradient: linear-gradient(121.94deg, #2997FF 15.98%, #1600FF 82.85%);
+}
+
+#sAchievedCircle {
+    background: var(--blueGradient);
+}
+
+#salesCircle {
+    fill: none;
+    stroke: url(#BlueGradient);
+    stroke-width: 30px;
+    stroke-dasharray: 515;
+    stroke-dashoffset: 515;
+    transition: all 2s;
+
+}
+#sCircleStroke{
+    position: absolute;
+    right: 0;
+}

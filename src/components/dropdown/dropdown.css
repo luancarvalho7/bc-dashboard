@@ -1,0 +1,59 @@
+#selectButton{
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    margin: 10px 0px 40px 0px;
+}
+#select {
+    display: none;
+    
+}
+
+#selectWeek {
+    position: absolute;
+    z-index: 3;
+    width: fit-content;
+    border-radius: 12px;
+    list-style: none;
+    cursor: pointer;
+    background-color: #0F0F11;
+    overflow: hidden;
+    transition:  all 0.5s;
+}
+
+#dropdown li:hover {
+   background-color: #161618; 
+}
+.disabled {
+    display: none;
+}
+
+.dd-selected{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 300;
+    z-index: 2;
+}
+#dd-indicator {
+    width: 24px;
+    height: 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.dd-indicator-closed{
+    background-image: url('../../assets/svg/icons/arrow-down.svg');
+}
+.dd-indicator-open{
+    background-image: url('../../assets/svg/icons/tracer.svg');
+}
+
+.dd-item {
+    padding: 10px 20px;
+    width: 260px;
+    font-size: 14px ;
+}
+.dd-item h1 {
+    font-size: 14px ;
+    font-weight: 500;
+}

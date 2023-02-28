@@ -1,0 +1,24 @@
+:root {
+    --greenGradient: linear-gradient(121.94deg, #80DF8F 15.98%, #6DE9DA 82.85%);
+}
+
+
+#mAchievedCircle {
+    background: var(--greenGradient);
+}
+
+#monthlyGoalCircle {
+    fill: none;
+    stroke: url(#GreenGradient);
+    stroke-width: 30px;
+    stroke-dasharray: 515;
+    stroke-dashoffset: 515;
+    transition: all 2s;
+
+}
+
+
+#mCircleStroke{
+    position: absolute;
+    right: 0;
+}

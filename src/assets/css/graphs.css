@@ -1,0 +1,40 @@
+.mainGraph {
+    position: relative;
+}
+.graphText{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.graphMainInfoTxt {
+    display: flex;
+    font-size: 34px;
+    font-weight: 800;
+}
+.graphSubInfoTxt{
+    font-size: 16px;
+    font-weight: 500;
+}
+.graphSubtitle {    
+    display: flex;
+    gap: 24px;
+}
+.graphSubtitle li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+.graphSubtitle li span {
+    margin-left: 10px;
+}
+.miniCircle{
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    background-color: var(--grey);
+    border-radius: 999px;
+}

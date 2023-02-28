@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Roboto:wght@300&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: 'Inter', sans-serif;
+    --black600: #09090A;
+    --grey: #424245
+}
+
+body {
+    color: white;
+    background-color: black
+}
+
+.infoCard {
+    width: 350px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 40px 200px 25px;
+    gap: 24px;
+    padding: 20px 10px;
+    border-radius: 8px;
+
+    justify-items: center;
+    align-items: center;
+
+    background-color: var(--black600);
+}
+
+/* Main */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+#dashboard {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+#topDashb {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+#topGraphs{
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
