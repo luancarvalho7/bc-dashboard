@@ -1,27 +1,34 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <style>
-      #my-custom-style {
-        background-color: #f5f5f5;
-        padding: 20px;
-        font-size: 18px;
-      }
+<h1 align="center"> BoraCodar #08 </h1>
 
-      #my-custom-style h1 {
-        color: #007bff;
-        font-size: 32px;
-      }
+<p align="center">Dashboard</p>
 
-      #my-custom-style h2 {
-        font-size: 24px;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="my-custom-style">
-      <h1>My Project</h1>
-      <h2>A brief description of my project</h2>
-    </div>
-  </body>
-</html>
+<p align="center">
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+</p>
+
+<br>
+
+<p align="center">
+  <img alt="rocketpay" src=".github/project.png" width="100%">
+</p>
+
+## 🚀 Tecnologias
+
+Esse projeto foi desenvolvido com as seguintes tecnologias:
+
+- HTML e CSS
+- [ReactJS](https://reactjs.org/)
+- [Node e NPM](https://nodejs.org/)
+- [Vite](https://vitejs.dev/)
+- [iMask](https://imask.js.org)
+
+## 💻 Projeto
+
+Dashboard com o objetivo de monitorar as vendas de uma empresa. O Dashboard mostra o NPS, quantidade de vendas semanais e o faturamento. 
+
+## 🔖 Layout
+
+Você pode visualizar o layout do projeto através [DESSE LINK](https://www.figma.com/file/HgSigYR6RY4gJ3u71lALdR/%23boraCodar---Desafio-8-(Community)?node-id=7%3A3&t=QxoC2ZgeFDbJXTOO-1).
+
