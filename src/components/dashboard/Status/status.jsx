@@ -2,13 +2,13 @@ import { useState, useEffect, useRef } from 'react'
 
 import './status.css'
 
-import happyVetor from '../../assets/svg/emoji/happy.svg'
-import midVetor from '../../assets/svg/emoji/mid.svg'
-import sadVetor from '../../assets/svg/emoji/sad.svg'
+import happyVetor from '../../../assets/svg/emoji/happy.svg'
+import midVetor from '../../../assets/svg/emoji/mid.svg'
+import sadVetor from '../../../assets/svg/emoji/sad.svg'
 
 
 
-export function Status() {
+export function Status({npsScore}) {
 
     const status = {
         good: {
@@ -31,19 +31,21 @@ export function Status() {
     }
  
     const statusTxt = useRef(null)
-    let currentStatus = status.good
-    console.log(currentStatus)
+    const [currentStatus, setCurrentStatus] = useState(status.good)
 
-    const npsScore = 0
-    if (npsScore <= 30) {
-        currentStatus = status.bad
-    }
-    if (npsScore <= 70 && npsScore >30) {
-        currentStatus = status.mid
-    }
-    if (npsScore <= 100  && npsScore >70) {
-        currentStatus = status.good
-    }
+    useEffect(()=>{
+        if (npsScore <= 30) {
+            setCurrentStatus(status.bad)
+        }
+        if (npsScore <= 70 && npsScore >30) {
+            setCurrentStatus(status.mid)
+        }
+        if (npsScore <= 100  && npsScore >70) {
+            setCurrentStatus(status.good)
+
+        }
+    }, [npsScore])
+
 
 
     return (

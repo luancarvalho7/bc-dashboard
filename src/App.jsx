@@ -1,28 +1,20 @@
+import { useState, useEffect } from 'react'
 import './assets/css/global.css'
-import './assets/css/graphs.css'
-import './assets/css/texts.css'
+
+import data from "./utils/data.json"
+
 import { Dropdown } from './components/dropdown/dropdown.jsx'
-import { Status } from './components/Status/status'
-import { SalesGraph } from './components/SalesGraph/SalesGraph'
-import { MonthlyGoal } from './components/MonthlyGoal/MonthlyGoal'
-import { WeeklyGraph } from './components/WeeklyGraph/WeeklyGraph'
+import { Dashboard } from './components/dashboard/dashboard'
+
 export function App() {
 
-
+  
+  let [weekNumber, setWeekNumber] = useState(0)
   return (
     <>
-      <Dropdown />
+      <Dropdown func={setWeekNumber}/>
       <main>
-        <section id="dashboard">
-          <div id="topDashb">
-            <Status />
-            <div id="topGraphs">
-              <SalesGraph />
-              <MonthlyGoal />
-            </div>
-          </div>
-          <WeeklyGraph />
-        </section>
+        <Dashboard data={data} currentWeek={weekNumber}/>
       </main>
     </>
   )

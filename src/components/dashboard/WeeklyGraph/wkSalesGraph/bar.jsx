@@ -1,10 +1,9 @@
 import { useRef, useState } from "react"
-export function Bar({ day, quanty }) {
+export function Bar({ day, highestValue, quanty,  }) {
     const bar = useRef()
-    const x = quanty*10
     const [barHeight, setBarHeight] = useState(0)
     setTimeout(() => {
-        setBarHeight(x)
+        setBarHeight(quanty*(250/highestValue))
     }, 100);
 
     return (

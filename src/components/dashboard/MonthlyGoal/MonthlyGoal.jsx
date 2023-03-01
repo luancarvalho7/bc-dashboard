@@ -1,20 +1,22 @@
 
-import { useState } from 'react'
-import { useSpring, animated } from 'react-spring'
-import {Counter} from '../../utils/counter.jsx'
+import { useState, useEffect } from 'react'
+import { Counter } from '../../../utils/counter.jsx'
 import './MonthlyGoal.css'
-import fullEclipse from '../../assets/svg/graph/full-eclipse.svg'
+import fullEclipse from '../../../assets/svg/graph/full-eclipse.svg'
 
 
-export function MonthlyGoal() {
-    let mGoal = 100
-    const mAchieved = 33
+export function MonthlyGoal({ mGoal, achieved }) {
+    if (typeof (mGoal) != 'number') {
+        mGoal = 100
+    }
+    const [mAchieved, setMAchieved] = useState(0)
+    if (typeof (achieved) == 'number') { useEffect(() => setMAchieved(achieved), [achieved]) }
     const mPercentage = (mAchieved / mGoal) * 100
-    
+
     const [currentDashOffset, setcurrentDashOffset] = useState(515)
     setTimeout(() => {
         setcurrentDashOffset((100 - mPercentage) * 5.15)
-    }, 200 ); 
+    }, 200);
 
 
     return (
@@ -22,7 +24,7 @@ export function MonthlyGoal() {
             <h1 className="cardTitle ">Monthly Goal</h1>
             <div className="mainGraph">
                 <div className="graphText">
-                    <h1 className='graphMainInfoTxt'><Counter value={mAchieved}/></h1>
+                    <h1 className='graphMainInfoTxt'><Counter value={mAchieved} /></h1>
                     <h2 className='graphSubInfoTxt'>achieved</h2>
                 </div>
                 <img src={fullEclipse} />

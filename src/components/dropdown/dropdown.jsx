@@ -1,11 +1,14 @@
 import { useState, useRef, useEffect } from 'react'
 import './dropdown.css'
 
-export function Dropdown() {
+export function Dropdown({func}) {
+
+
     /* enable/disable dropdown */
     const [isActive, setIsActive] = useState(false)
     function handleSelectWeek() {
         setIsActive(!isActive)
+        
     }
 
 
@@ -18,9 +21,11 @@ export function Dropdown() {
 
     function handleCurrentWeek() {
         setcurrentValue(select.current.value)
-    }
+    }   
 
-    useEffect(() => { select.current.value = currentValue }, [currentValue])
+    useEffect(() => { select.current.value = currentValue;
+        func(currentValue-1)
+     }, [currentValue])
 
 
     /* custom dropdown sync */
@@ -34,7 +39,6 @@ export function Dropdown() {
 
 
     function syncDD(value) {
-        console.log(`Showing ${value}`)
         listItens[2].current.classList.add('disabled')
         for (let i = 1; i < listItens.length; i++) {
             if (i == value) {

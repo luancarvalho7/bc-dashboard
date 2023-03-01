@@ -1,24 +1,35 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './SalesGraph.css'
-import {Counter} from '../../utils/counter.jsx'
-import fullEclipse from '../../assets/svg/graph/full-eclipse.svg'
+import {Counter} from '../../../utils/counter.jsx'
+import fullEclipse from '../../../assets/svg/graph/full-eclipse.svg'
 
-export function SalesGraph() {
-    const sGoal = 100
-    const sAchieved = 11
-    const sPercentage = (sAchieved / sGoal) * 100
-    const [currentDashOffset, setcurrentDashOffset] = useState(515)
+export function SalesGraph({sales, sGoal}) {
+    if(typeof(sGoal) != 'number'){
+        sGoal = 100
+    }
+
+    const [sAchieved, setSAchieved] = useState(0)
+    if(typeof(sales) == 'number'){useEffect(() => setSAchieved(sales), [sales])}
+    
+    let sPercentage = (sAchieved / sGoal) * 100 
+    if(sPercentage > 100){
+        sPercentage = 100
+    }
+
+
+    let [currentDashOffset, setcurrentDashOffset] = useState(515)
+   
     setTimeout(() => {
         setcurrentDashOffset((100 - sPercentage) * 5.15)
     }, 200 ); 
-    
+
 
     return (
         <div id="salesGraph" className='infoCard'>
             <h1 className="cardTitle ">Concluded Sales</h1>
             <div className="mainGraph">
                 <div className="graphText">
-                    <h1 className='graphMainInfoTxt'><Counter value={sAchieved}/>%</h1>
+                    <h1 className='graphMainInfoTxt'><Counter value={sPercentage}/>%</h1>
                     <h2 className='graphSubInfoTxt'>achieved</h2>
                 </div>
                 <img src={fullEclipse} />

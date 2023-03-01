@@ -1,0 +1,21 @@
+{
+    "weeks": [
+        {
+            "sales": [3,8,6,4,5,7,5],
+            "nps": 83,
+            "salesGoal": 50
+        },
+        {
+            "sales": [4,2,3,1,2,3,0],
+            "nps": 30,
+            "salesGoal": 32
+        },
+        {
+            "sales": [2,4,6,4,5,3,2],
+            "nps": 54,
+            "salesGoal": 100
+        }
+    ],
+    "monthlyGoal": 1000,
+    "price": 12
+}
