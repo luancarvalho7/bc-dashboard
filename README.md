@@ -22,7 +22,6 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [ReactJS](https://reactjs.org/)
 - [Node e NPM](https://nodejs.org/)
 - [Vite](https://vitejs.dev/)
-- [iMask](https://imask.js.org)
 
 ## 💻 Projeto
 
